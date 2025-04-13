@@ -1,14 +1,18 @@
-
-
-import Navbar from './components/Navbar'
+import Navbar from "./components/Navbar";
+import { BrowserRouter, Route, Link, Routes } from "react-router-dom";
+import HomeScreen from "./screens/homeScreen";
 
 function App() {
-
   return (
-   <div>
-    <Navbar/>
-   </div>
-  )
+    <div>
+      <Navbar />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/home" exact Component={HomeScreen} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+export default App;
